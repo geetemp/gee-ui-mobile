@@ -1,0 +1,135 @@
+{
+  "name": "gee-ui-mobile",
+  "version": "1.0.3",
+  "description": "A UI component library for geetemp based antd mobile.",
+  "main": "dist/index.js",
+  "module": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "dev": "taskr",
+    "build": "taskr release",
+    "build-bundle": "scripts/build-bundle.sh",
+    "docs": "cross-env NODE_ENV=documentation start-storybook -s ./docs/public -p 6006",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "stylelint": "stylelint 'src/**/*.less' --config .stylelintrc",
+    "test": "npm run lint && npm run cover",
+    "build-docs": "rm -rf ./dist/docs && cross-env NODE_ENV=documentation build-storybook -s ./docs/public -o ./dist/docs",
+    "upload-docs": "npm run build-docs && scripts/upload-docs-build-docspot.sh",
+    "jest": "cross-env NODE_ENV=test TZ=UTC jest --runInBand",
+    "watch": "npm run jest -- --watch"
+  },
+  "keywords": [
+    "component",
+    "ecosystem-react",
+    "react",
+    "react-component",
+    "reactive",
+    "stateful",
+    "stateless"
+  ],
+  "author": "geetemp front-end engineering",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "antd-mobile": "^2.2.9",
+    "classnames": "^2.2.6",
+    "create-react-class": "^15.6.2",
+    "lodash": "^4.11.0",
+    "prop-types": "^15.6.0",
+    "react-peek": "^1.1.1",
+    "reselect": "^2.5.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-info": "^3.3.12",
+    "@storybook/addon-links": "^3.3.12",
+    "@storybook/addon-options": "^3.3.14",
+    "@storybook/addons": "^3.3.12",
+    "@storybook/react": "^3.3.12",
+    "@taskr/babel": "^1.1.0",
+    "@taskr/clear": "^1.1.0",
+    "@taskr/less": "^1.1.0",
+    "@taskr/watch": "^1.1.0",
+    "autoprefixer": "^8.2.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.3",
+    "babel-loader": "^7.1.4",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "babel-plugin-lodash": "^3.2.11",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-require-ignore": "^0.1.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babylon": "^6.0.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "^0.28.11",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.2",
+    "enzyme-to-json": "^3.1.4",
+    "eslint": "^3.14.1",
+    "eslint-config-appnexus": "^1.6.0",
+    "eslint-config-prettier": "^1.6.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-lodash": "^2.3.4",
+    "eslint-plugin-prettier": "^2.0.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-react": "^6.9.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "glob": "^7.1.1",
+    "husky": "^0.13.3",
+    "jest": "^21.2.1",
+    "jscodeshift": "^0.5.0",
+    "less": "^2.3.1",
+    "less-loader": "^4.1.0",
+    "lint-staged": "^3.4.0",
+    "marksy": "^6.0.3",
+    "mini-css-extract-plugin": "^0.4.0",
+    "np": "^2.20.1",
+    "postcss-loader": "^2.1.3",
+    "prettier": "^1.1.0",
+    "raw-loader": "^0.5.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-syntax-highlighter": "^7.0.0",
+    "sinon": "^2.0.0-pre",
+    "style-loader": "^0.20.3",
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^16.0.0",
+    "taskr": "^1.1.0",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0"
+  },
+  "jest": {
+    "rootDir": "src",
+    "setupFiles": [
+      "../tests/init",
+      "../tests/enzyme-setup"
+    ],
+    "collectCoverageFrom": [
+      "components/**/*.{js,jsx}",
+      "!components/**/examples/*",
+      "util/**/*.{js,jsx}"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

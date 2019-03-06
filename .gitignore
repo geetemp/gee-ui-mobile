@@ -1,0 +1,23 @@
+# Built files
+dist
+lib
+src/docs/docgen.json
+
+# Npm
+npm-debug.log*
+node_modules
+
+# Vim
+**/*.swp
+**/*.swo
+
+# IntelliJ
+.idea
+
+# browserstack
+reports
+local.log
+
+# Coverage
+coverage
+.DS_Store
