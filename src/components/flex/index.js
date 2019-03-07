@@ -1,5 +1,6 @@
 import React from "react";
-const AntFlex = require("antd-mobile/lib/flex");
+import { Flex as AntFlex } from "antd-mobile";
+import "./style/index.less";
 
 export default class Flex extends React.Component {
 	render() {

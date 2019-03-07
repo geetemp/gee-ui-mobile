@@ -1,5 +1,6 @@
 import React from "react";
-const AntInputItem = require("antd-mobile/lib/input-item");
+import { InputItem as AntInputItem } from "antd-mobile";
+import "./style/index.less";
 
 export default class InputItem extends React.Component {
 	render() {

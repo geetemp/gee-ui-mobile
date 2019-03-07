@@ -1,5 +1,6 @@
 import React from "react";
-const AntPicker = require("antd-mobile/lib/picker");
+import { Picker as AntPicker } from "antd-mobile";
+import "./style/index.less";
 
 export default class Picker extends React.Component {
 	render() {

@@ -1,5 +1,6 @@
 import React from "react";
-const AntIcon = require("antd-mobile/lib/icon");
+import { Icon as AntIcon } from "antd-mobile";
+import "./style/index.less";
 
 export default class Icon extends React.Component {
 	render() {

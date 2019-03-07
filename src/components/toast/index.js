@@ -1,2 +1,4 @@
-export default require("antd-mobile/lib/toast");
+import { Toast as AntToast } from "antd-mobile";
+import "./style/index.less";
 
+export default AntToast;

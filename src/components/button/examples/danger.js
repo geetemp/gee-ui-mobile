@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../style";
+// import "../style";
 import Button from "../index";
 
 const sectionStyle = {

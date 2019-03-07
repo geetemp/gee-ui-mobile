@@ -11,7 +11,16 @@ exports.scripts = function*(task) {
 		])
 		.babel({
 			presets: [["es2015", { loose: true, modules: false }]],
-			plugins: ["transform-class-properties"]
+			plugins: [
+				"transform-class-properties",
+				[
+					"import",
+					{
+						libraryName: "antd-mobile",
+						style: true
+					}
+				]
+			]
 		})
 		.target("lib");
 };

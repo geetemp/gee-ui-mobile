@@ -36,7 +36,14 @@
 			"plugins": [
 				["transform-object-rest-spread"],
 				"transform-class-properties",
-				"lodash"
+				"lodash",
+				[
+					"import",
+					{
+						"libraryName": "antd-mobile",
+						"style": true
+					}
+				]
 			],
 			"presets": [
 				["env", {

@@ -1,6 +1,6 @@
 {
   "name": "gee-ui-mobile",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A UI component library for geetemp based antd mobile.",
   "main": "dist/index.js",
   "module": "lib/index.js",
@@ -37,6 +37,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "antd-mobile": "^2.2.9",
+    "babel-plugin-import": "^1.11.0",
     "classnames": "^2.2.6",
     "create-react-class": "^15.6.2",
     "lodash": "^4.11.0",

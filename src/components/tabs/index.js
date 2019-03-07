@@ -1,5 +1,6 @@
 import React from "react";
-const AntTabs = require("antd-mobile/lib/tabs");
+import { Tabs as AntTabs } from "antd-mobile";
+import "./style/index.less";
 
 export default class Tabs extends React.Component {
 	render() {

@@ -1,5 +1,6 @@
 import React from "react";
-const AntButton = require("antd-mobile/lib/button");
+import { Button as AntButton } from "antd-mobile";
+import "./style/index.less";
 
 export default class Button extends React.Component {
 	render() {
